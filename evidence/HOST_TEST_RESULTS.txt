@@ -1,0 +1,43 @@
+HOST TESTS ONLY: no ESP-IDF target build or physical bench run.
+UTC: 2026-10-08T21:08:42.494142+00:00
+cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+
+PASS protocol: CRC, all 208 single-bit corruptions, strict fields, version/length, sequence wrap, duplicate/old/retired session
+PASS latch: CLEAR/timeouts cannot silence ALARM; counter recovers a lost HIGH packet
+PASS control: countdown, loss cancellation, motion at arm boundary, reboot fault, counter regression/wrap
+PASS input: warm-up, 20ms stability filter, second rising edge accepted without software cooldown
+PASS sender: immediate event preemption, retry deadlines/budget, late/wrong/duplicate ACK rejection
+PASS replay: dropped ACK causes retry without double alarm; old replay after rearm ignored; later snapshot recovers lost motion and clear
+PASS OLED UI: alarm/control/link/fault combinations, bounds, persistent ALARM after CLEAR, page masks and countdown
+PASS: 16 full-frame writes, 2 single-page writes, offsets and recovery after partial write
+PASS LED: startup off, arming/armed off, motion on, CLEAR/link-loss latch, disarm off, failed writes retried
+All 5 host test programs passed. Radio/I2C/GPIO timing still needs measurement on the boards.
+
+Source SHA-256:
+cc93daf7850c3699a29f3e6c655ad2d7e4352c56f91a598149bcf2f81ae60ef9  components/alarm_app/alarm_app.c
+37fe2ad3ba27cad2557b2fb608486bfbac37fc087d1818b10b80a7af345c2e9d  components/alarm_app/alarm_app.h
+7fcb40e925de303cfabf6fd18a080942019dfbb1a5ec46383786919ec4da5028  components/alarm_app/board_config.h
+0635f7b92e357bcd1c0e3489f03402c39dd043802336fa656ead26ba2dda31e6  components/alarm_app/oled_config.h
+a96ee989ed085c38db5de623cb86f8a6fd7d062fff907aeca33ed5ec32bb827f  components/alarm_app/oled_wire.c
+770cbe881447286b1b7b7df0324a64aed3fe1e8b64504471cd41ab05c4942bd4  components/alarm_app/oled_wire.h
+7ae502d5814201626f60a7eefb231eb795bc72d0e80df3844ad6fa6b53b034da  components/alarm_app/panel_display.c
+f525e43ae5c799323ae67730e4c76645039c3e043f1bb9cdce13a74eeb925c76  components/alarm_app/panel_display.h
+0375900c9adb94c837c3a021d9293dc63ece2ae25248efbe1f0aaca817f7a59a  components/alarm_app/panel_outputs.c
+eb3fdf8e7eb9ef2e7435c07192a1c4ce7e4a5d9a779450e73e31d96094f29a0c  components/alarm_app/panel_outputs.h
+b8416faf08e6edf3044d74b6f6d5d5111b802edc90a525054ec751405b2ac209  components/alarm_app/ui_frame.c
+59161b6f7367d133e8491434679050107c7c94edbfdd9f42e289e074e1bfbfc6  components/alarm_app/ui_frame.h
+c770c8d54a40b9f80e4d2b91549f462d6e53fc4d17da917d09fbd3b118647d70  components/alarm_core/alarm_logic.c
+aa0f549d98aa1e07eb8a810ddd3354eecc6be2b505e2d0c98fa018c32f312141  components/alarm_core/alarm_protocol.c
+13a8774313155ba835ded8bdfb80bc18768848683baa3706ceae3bc6f38a0312  components/alarm_core/include/alarm_logic.h
+43a6c56a6a60bf2541589737dfe943416a49b90b6c38ffbdd2003755f35a49da  components/alarm_core/include/alarm_protocol.h
+d508d29aa49525fd174ea0cb83344bf33bd8d77dc3ef7f3d7975f71ff64ff630  detector/main/main.c
+047384b39245fa5e3885cdd2e5924ac6a70f56d01839b54124bbce845bc4ffdf  panel/main/main.c
+09b26dcac2104733b5555120392b89ba42cef4fbca75bf8c61ad8d0ce97ac15d  tests/run_tests.py
+cd9b77e0c565c0edeac8f02196aff26c8e4bc8dd7433a86d61c21768067c3c36  tests/stubs/driver/gpio.h
+145d25e0f893272ba0772c3dcbd94ff6874ff276681fbaa726119c04f46cc30c  tests/stubs/esp_err.h
+ea9579b2bb476002548585d2ac9b26c5465c25772d7ed4138ad8292a3d06ec78  tests/stubs/esp_log.h
+f27e238b4add781b19fc26be3e0949cb011aa168449915f788f30568cb3d3431  tests/test_oled_wire.c
+a97d438f5c7010243b94c6dd921ddf2a9c75a65ae1ced8236ce08f0827944f79  tests/test_outputs.c
+578609c679b10d9b468cce684d4614b8694e8ac1b336f8c7cf99ec0f0e26975d  tests/test_protocol.c
+20573c751ec97551bdf3aeb061c9ac3f09e4e50bf1cc01d5016307c08ed55887  tests/test_system.c
+18f59856672be9d57c183ad62d19d8d4c5b14b314323f02ccd45faebdbc5c9a0  tests/test_ui.c
