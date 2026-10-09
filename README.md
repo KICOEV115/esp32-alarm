@@ -29,19 +29,6 @@ The detector always reports sensor state, including while the panel is disarmed.
 
 See [architecture](docs/ARCHITECTURE.md), [protocol](PROTOCOL.md), and [testing](docs/TESTING.md) for details.
 
-## Source map
-
-| Directory | Responsibility |
-| --- | --- |
-| `panel/main`, `detector/main` | Small entry points selecting a role |
-| `components/alarm_core` | Packet format, filtering, state machines, retry rules |
-| `components/alarm_app` | ESP-IDF hardware integration, radio, LED and OLED |
-| `tests` | Host-side C tests, including a mocked GPIO driver |
-| `docs` | Architecture, testing and publishing instructions |
-| `evidence` | Actual host-test record and physical acceptance checklist |
-
-Pin assignments and input timing are in `components/alarm_app/board_config.h`. OLED settings are in `oled_config.h`. Alarm/link timing constants are in `components/alarm_core/include/alarm_logic.h`.
-
 ## Limitations
 
 This is an educational prototype, not a certified security system. Peer discovery is automatic and traffic is not authenticated/encrypted.
