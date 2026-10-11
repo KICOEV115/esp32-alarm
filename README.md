@@ -30,6 +30,7 @@ The control loop handles inputs and the LED. A separate task updates the OLED.
 ## Wiring
 
 Panel esp32 is connected to a oled screen and a led through a breadboard and connected to a monitor laptop through usb, the detector esp32 is conntected to a PIR sensor and connected to a powerbank through a usb cable.
+All connections were made with jumper wires, no soldering was made.
 
 ## Build and flash
 
