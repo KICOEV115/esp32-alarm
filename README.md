@@ -24,7 +24,6 @@ The OLED also reports connection faults. Messages include sequence numbers, ackn
 |`panel/`|Control-panel entry point|
 |`components/alarm\_core/`|Alarm rules and message protocol|
 |`components/alarm\_app/`|GPIO, radio and OLED integration|
-|`tests/`|Tests that run on a computer|
 
 The control loop handles inputs and the LED. A separate task updates the OLED.
 
