@@ -32,19 +32,6 @@ The control loop handles inputs and the LED. A separate task updates the OLED.
 Panel esp32 is connected to a oled screen and a led through a breadboard and connected to a monitor laptop through usb, the detector esp32 is conntected to a PIR sensor and connected to a powerbank through a usb cable.
 All connections were made with jumper wires, no soldering was made.
 
-## Build and flash
-
-Open an ESP-IDF terminal at the repository root:
-
-```sh
-cd panel
-idf.py set-target esp32
-idf.py build
-idf.py -p COM5 flash monitor
-```
-
-Exit the monitor with Ctrl+]. Repeat inside `detector/` for the other board. Replace COM5 with the correct port. Build inside either role folder; the repository root has no CMakeLists.txt.
-
 ## Drawbacks
 
 * PIR warm-up and retrigger behaviour can make detection feel slow.
