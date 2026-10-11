@@ -29,14 +29,7 @@ The control loop handles inputs and the LED. A separate task updates the OLED.
 
 ## Wiring
 
-|Board|Connections|
-|-|-|
-|Detector|PIR OUT → GPIO27; GND → GND; supply according to the sensor specification|
-|Panel|OLED SDA → GPIO21; SCL → GPIO22; VCC → 3V3; GND → GND|
-|Panel buttons|ARM between GPIO32 and GND; DISARM between GPIO33 and GND|
-|Panel LED|GPIO25 → 1 kohm resistor → LED anode; cathode → GND|
-
-PIR output must be 3.3 V-compatible. Disconnect power before rewiring. Pins are configured in `components/alarm\_app/board\_config.h`.
+Panel esp32 is connected to a oled screen and a led through a breadboard and connected to a monitor laptop through usb, the detector esp32 is conntected to a PIR sensor and connected to a powerbank through a usb cable.
 
 ## Build and flash
 
