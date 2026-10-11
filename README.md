@@ -42,3 +42,7 @@ All connections were made with jumper wires, no soldering was made.
 
 State updates are `O(1)`. CRC is `O(n)` for `n` input bytes, but packets are fixed at 26 bytes. Session filtering scans at most four retired IDs. Frame rendering is `O(B + C)` with the fixed font, frame comparison is `O(B)`, and changed-page transfers are `O(8 + P × W)`: `B` is framebuffer bytes, `C` is characters, `P` is changed pages and `W` is width.
 
+## Demonstration
+
+![Watch the alarm demonstration](alarm%20demo.mp4)
+
