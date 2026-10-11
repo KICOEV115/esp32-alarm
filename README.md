@@ -52,16 +52,6 @@ idf.py -p COM5 flash monitor
 
 Exit the monitor with Ctrl+]. Repeat inside `detector/` for the other board. Replace COM5 with the correct port. Build inside either role folder; the repository root has no CMakeLists.txt.
 
-## Tests
-
-With Python 3 and a native C compiler installed:
-
-```sh
-python tests/run\_tests.py
-```
-
-The recorded host run passed five test programs. Physical acceptance of this exact LED release is still pending; see [bench tests](evidence/BENCH_TESTS.md).
-
 ## Drawbacks
 
 * PIR warm-up and retrigger behaviour can make detection feel slow.
