@@ -6,18 +6,6 @@ A college learning project using two ESP32 boards. One reads a PIR motion sensor
 
 I used this project to practise connecting hardware, reading inputs, sending wireless messages and debugging with serial logs. Keeping the detector and panel separate lets them communicate without a cable or Wi-Fi router.
 
-## Metadata
-
-|Field|Value|
-|-|-|
-|Stability|Learning prototype|
-|Authors|Kıvanç Turgut (project owner)|
-|Licence|Not selected; no LICENSE file included|
-|Platforms|Classic ESP32 DevKitC / WROOM; ESP-IDF 6.1|
-|Portability|Core logic uses standard C; hardware integration requires ESP-IDF|
-|Category|Embedded systems / student project|
-|Tags|C, ESP32, FreeRTOS, ESP-NOW, PIR, GPIO, I²C|
-
 ## How it works
 
 1. Both boards start; the PIR warms up for 60 seconds.
