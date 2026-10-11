@@ -1,6 +1,6 @@
 # ESP32 Wireless Motion Alarm
 
-A two-button motion alarm written in C with ESP-IDF and FreeRTOS. A detector esp32 reports PIR activity over ESP-NOW. A separate esp32 handles arming, shows status on an OLED, and lights a red LED when an alarm is triggered.
+A two-node motion alarm written in C with ESP-IDF and FreeRTOS. A detector esp32 reports PIR activity over ESP-NOW. A separate esp32 handles arming, shows status on an OLED, and lights a red LED when an alarm is triggered.
 
 The LED stays on after the sensor returns to CLEAR. Pressing the DISARM button clears the alarm and turns the LED off. Connection faults are shown on the OLED; they do not light the alarm LED.
 
@@ -14,7 +14,7 @@ The LED stays on after the sensor returns to CLEAR. Pressing the DISARM button c
 
 ## Build
 
-Used ESP-IDF **6.1**, an ESP-IDF terminal, and a USB serial driver appropriate for the board.
+Used ESP-IDF **6.1**, and a USB serial driver appropriate for the board.
 
 ## Design
 
