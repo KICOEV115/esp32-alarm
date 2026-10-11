@@ -16,7 +16,7 @@ I used this project to practise connecting hardware, reading inputs, sending wir
 
 The OLED also reports connection faults. Messages include sequence numbers, acknowledgements and a motion counter to help handle missed or repeated packets.
 
-## Architecture
+## Files
 
 |Folder|Purpose|
 |-|-|
